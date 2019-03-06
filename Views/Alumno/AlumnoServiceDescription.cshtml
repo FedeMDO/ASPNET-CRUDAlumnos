@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Descripcion del Web Service";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<style>
+    body {
+        margin: 0;
+    }
+
+    iframe {
+        display: block; /* iframes are inline by default */
+        background: #ffffff;
+        border: none; /* Reset default border */
+        height: 100vh; /* Viewport-relative units */
+        width: 100vw;
+    }
+</style>
+
+<div id="serviceDescriptionXMLContainer">
+    <iframe src="~/WebServices/ServiceAlumno.svc?singleWsdl" type="application/xml" iframe/>
+</div>
+
+<script>
+    serviceDescriptionXMLContainer.innerHtml = document.getElementById('serviceDescriptionXMLContainer').contentWindow.document;
+</script>
