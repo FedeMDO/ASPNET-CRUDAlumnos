@@ -9,6 +9,11 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
+
+    <style>
+
+    </style>
+
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -25,7 +30,7 @@
                     <li>@Html.ActionLink("CRUD en MVC", "Index", "Alumno")</li>
                     <li>@Html.ActionLink("CRUD en WebForms", "AlumnoWebForms", "Alumno")</li>
                     <li>@Html.ActionLink("Descripcion de Servicios WCF (XML)", "AlumnoServiceDescription", "Alumno")</li>
-
+                    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
                 </ul>
             </div>
         </div>
@@ -33,8 +38,8 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+        <footer style="text-align:center">
+            <p>&copy; @DateTime.Now.Year - Federico Montes de Oca - Software Developer</p>
         </footer>
     </div>
 
